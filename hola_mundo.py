@@ -1,4 +1,7 @@
-print("Hola a todos")
+print("Hola como estan")
+print("Todo bien")
+x = "Ezequiel"
+print(f"Hola soy {x}")
 print("Estoy subiendo un archivo python")
 
 x = 2
