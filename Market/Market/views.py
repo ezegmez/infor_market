@@ -18,3 +18,7 @@ def inicio(request):
         "productos": productos
     }
     return render(request, "inicio.html", context)
+
+def login(request):
+    print(request.POST.get("username"))
+    return render(request, "login.html")
