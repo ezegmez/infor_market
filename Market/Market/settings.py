@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+from django.urls import reverse_lazy
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -8,6 +9,8 @@ SECRET_KEY = 'django-insecure-sbfh=jf)t^a&4oe-obek*36-xvw4505awuods)n_aeso118&t9
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+LOGIN_REDIRECT_URL = reverse_lazy("inicio")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
