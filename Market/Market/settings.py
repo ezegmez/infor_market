@@ -1,6 +1,8 @@
-from pathlib import Path
 import os
+
+from pathlib import Path
 from django.urls import reverse_lazy
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -91,6 +93,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"), 
 )
