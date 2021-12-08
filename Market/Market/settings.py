@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 from django.urls import reverse_lazy
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-sbfh=jf)t^a&4oe-obek*36-xvw4505awuods)n_aeso118&t9'
@@ -12,7 +11,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = reverse_lazy("login")
+
 LOGIN_REDIRECT_URL = reverse_lazy("inicio")
+
+AUTH_USER_MODEL = "usuarios.Usuario"
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -21,7 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'productos'
+    'apps.productos',
+    'apps.usuarios'
 ]
 
 MIDDLEWARE = [
